@@ -15,7 +15,7 @@ Note: The result will be the same or different depending on the version you have
 To not lose the data every time the container is started **[Redis](https://redis.io/ "Redis")** it is recommended to configure the file `docker-compose.yml` as follows:
 
     version: '3'
-    
+
     services:
       rs01:
         image: redis
@@ -32,7 +32,7 @@ Note: The value of **"folder_path"** should be the path where the **[Redis](http
 
 `docker-compose up --build -d`
 
-- To stop the container: 
+- To stop the container:
 
 `docker-compose down`
 
