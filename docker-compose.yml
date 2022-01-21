@@ -6,5 +6,5 @@ services:
     ports:
       - "6379:6379"
     volumes:
-      - folder_path/redis.conf:/usr/local/etc/redis/redis.conf
-      - folder_path/data:/data
+      - ${FOLDER_PATH}/redis.conf:/usr/local/etc/redis/redis.conf
+      - ${FOLDER_PATH}/data:/data

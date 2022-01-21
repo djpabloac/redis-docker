@@ -1,3 +1,5 @@
 data
 redis.config
 .DS_Store
+
+.env

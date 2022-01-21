@@ -10,6 +10,12 @@ In a terminal type the following command `docker --version`, then enter. The res
 
 Note: The result will be the same or different depending on the version you have installed.
 
+##### Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`FOLDER_PATH`
+
 ##### Setting
 
 To not lose the data every time the container is started **[Redis](https://redis.io/ "Redis")** it is recommended to configure the file `docker-compose.yml` as follows:
@@ -22,10 +28,10 @@ To not lose the data every time the container is started **[Redis](https://redis
         ports:
           - "6379:6379"
         volumes:
-          - folder_path/redis.conf:/usr/local/etc/redis/redis.conf
-          - folder_path/data:/data
+          - ${FOLDER_PATH}/redis.conf:/usr/local/etc/redis/redis.conf
+          - ${FOLDER_PATH}/data:/data
 
-Note: The value of **"folder_path"** should be the path where the **[Redis](https://redis.io/ "Redis")** **"configuration"**and**"data"**files will be stored.
+Note: The value of **"FOLDER_PATH"** should be the path where the **[Redis](https://redis.io/ "Redis")** **"configuration"**and**"data"**files will be stored.
 
 ##### Execution commands
 - To run the container:
